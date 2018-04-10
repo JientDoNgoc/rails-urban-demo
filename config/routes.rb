@@ -1,4 +1,12 @@
 Rails.application.routes.draw do
+  resources :orders
+  resources :carts
+  resources :products
+  resources :product_groups
+  resources :categories
+  resources :users
   resources :blogs
-  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
+
+
 end
+
