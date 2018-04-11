@@ -4,7 +4,6 @@ Rails.application.routes.draw do
   resources :products
   resources :product_groups
   resources :categories
-  resources :users
   resources :blogs
 
 
