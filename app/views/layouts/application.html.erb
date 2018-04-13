@@ -1,14 +1,110 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>FinalDemoRails</title>
+    <title><%= full_title(yield(:title)) %></title>
+    <%= favicon_link_tag 'favicon.ico' %>
     <%= csrf_meta_tags %>
-
+    
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
   <body>
-    <%= yield %>
+    <div id="MainWrapper">
+      <!--Header-->
+      <header>
+        <div class="container">
+          <div class="header-top">
+            <div class="container">
+              <div class="top-left"><a href="#"> <i class="fa fa-phone" aria-hidden="true"></i> (+84)1676-825-746 </a> &thinsp; <a href="#"> <i class="fa fa-envelope" aria-hidden="true"></i> jient.contact@gmail.com</a></div>
+                <div class="top-right">
+                	<ul>
+                      <li><a>Login</a></li>
+                      <li><a>Register</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header
+      <!--endHeader-->
+      <!--Banner-->
+      <div class="container">
+        <nav class="navbar sticky-top navbar-expand-lg navbar-dark ">
+          <div class="container">
+            <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <%= link_to product_groups_path, class: 'navbar-brand' do %>
+              <%= image_tag("logo-white.png") %>
+            <% end%>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="nav navbar-nav mr-auto">
+                <li class="nav-item <%= is_active(products_path) %>">
+                  <%= link_to "STORE", products_path, class: 'nav-link' %>
+                </li>
+                <li class="nav-item <%= is_active(contact_index_path) %>">
+                    <%= link_to "CONTACT", contact_index_path, class: 'nav-link' %>
+                </li>
+              </ul>
+              <ul class="nav navbar-nav pull-right">
+                <li class="nav-item dropdown">
+                  <a class="dropdown-toggle nav-link" data-toggle="dropdown" href="#" aria-expanded="true">
+                    <i class="fa fa-shopping-cart fa-lg" style="color: #fff;"></i>
+                  </a>
+                  <div class="dropdown-menu dropdown-menu-right">
+                    <div class="dropdown-divider" href="#" ></div>
+                    <%= link_to product_groups_path, class:'dropdown-item' do %>
+                      <i class="fa fa-check" aria-hidden="true" ></i> CHECK OUT
+                    <% end%>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+      </div>
+      <!--EndBanner-->
+      <!--Content-->
+      <div id="content" class="container">
+        <%= yield %>
+      </div>
+      <!--EndContent-->
+      <!--Footer-->
+      <div class="container">
+        <footer>
+            <div class="row">
+              <div class="container">
+                <h1><%= image_tag("logo.png") %></h1>
+                <hr>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-6 center-right">
+                <p class="centertitle">CENTER PHU MY HUNG </p>
+                <ul>
+                  <li>S8-1 Sky Garden 1 (đường Nguyễn Văn Linh), Phú Mỹ Hưng, Quận 7, TP. HCM, Việt Nam.</li>
+                  <li>Tel: (84-8) 3925.2980 - Hotline: 090909.4641</li>
+                </ul>
+              </div>
+            </div>
+            <div class="copy-section">
+                <div class="container">
+                    <div class="footer-top">
+                        <p>Copyright &copy; 2018 URBAN STORE. All rights reserved | Powered and Designed by JientDoNgoc</p>
+                    </div>
+                    <div class="social-icons">
+                        <a href="https://www.facebook.com/maccenter.vn/"><i class="icon"></i></a>
+                        <a href="#"><i class="icon1"></i></a>
+                        <a href="#"><i class="icon2"></i></a>
+                        <a href="#"><i class="icon3"></i></a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+      </div>
+      <!--EndFooter-->
+    </div>
+      <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </body>
 </html>

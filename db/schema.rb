@@ -36,12 +36,6 @@ ActiveRecord::Schema.define(version: 20180410042906) do
     t.datetime "updated_at", null: false
   end
 
-  create_table "categories", force: :cascade do |t|
-    t.string "category_name"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
   create_table "order_items", force: :cascade do |t|
     t.integer "order_id"
     t.integer "product_id"
@@ -62,7 +56,6 @@ ActiveRecord::Schema.define(version: 20180410042906) do
   end
 
   create_table "product_groups", force: :cascade do |t|
-    t.integer "category_id"
     t.string "pg_name"
     t.string "pg_img"
     t.datetime "created_at", null: false
@@ -84,18 +77,6 @@ ActiveRecord::Schema.define(version: 20180410042906) do
     t.text "p_techspec"
     t.text "p_box"
     t.string "box_img"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
-  create_table "users", force: :cascade do |t|
-    t.string "username"
-    t.string "password"
-    t.string "email"
-    t.boolean "admin"
-    t.string "fullname"
-    t.string "address"
-    t.string "phone"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
