@@ -1,0 +1,28 @@
+<% provide(:title, "Products") %>
+<div class="products">
+  <div class="container">
+    <div class="row">
+      <% @pgroup.products.each do |product| %>
+          <div class="col-sm-6 col-md-4 col-lg-4 mt-4">
+            <div class="card">
+              <%= link_to product_path(product.id) do%>
+                <div class="img-box">
+                  <img class="card-img-top" src="<%= product.p_img %>">
+                </div>
+              <% end %>
+              <div class="card-block">
+                <%= hidden_field_tag 'p_id', product.id %>
+                <div class="details">
+                  <%= link_to product_path(product.id) do%>
+                    <h5 class="card-title"><%= product.p_name %></h5>
+                  <% end %>
+                  <p><%= simple_format product.overview%></p>
+                </div>
+                <p class="price"><%= number_to_currency (product.price), unit: 'VND ', precision: 0  %><p>
+              </div>
+            </div>
+          </div>
+      <% end %>
+    </div>
+  </div>
+</div>
