@@ -1,8 +1,9 @@
 Rails.application.routes.draw do
-  get 'contact/index'
+  root 'product_groups#index'
+  get 'contact', to: 'contact#index'
 
   resources :orders
-  resources :carts
+  resources :carts 
   resources :products
   resources :product_groups
   resources :blogs
