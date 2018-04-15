@@ -5,7 +5,6 @@ Product.delete_all
 #CartItem.delete_all
 #Order.delete_all
 #OrderItem.delete_all
-#Account.delete_all
 
 #Macfamily
 pgroup = ProductGroup.create(pg_name: 'Mac Family', pg_img: 'http://maccenter.vn/Images/imac_2x.png')

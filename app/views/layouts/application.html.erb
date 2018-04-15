@@ -67,13 +67,15 @@
               </ul>
             </div>
           </div>
-          <p class="notice" style="color: #fff;"><%= notice %></p>
-          <p class="alert" style="color: #fff;"><%= alert %></p>
         </nav>
       </div>
       <!--EndBanner-->
       <!--Content-->
       <div id="content" class="container">
+        <div>
+          <p class="notice" style="color: #000;"><%= notice %></p>
+          <p class="alert" style="color: #000;"><%= alert %></p>
+        </div>
         <%= yield %>
       </div>
       <!--EndContent-->

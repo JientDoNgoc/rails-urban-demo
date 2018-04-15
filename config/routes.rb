@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  root 'product_groups#index'
   devise_for :users , path: '', 
   path_names: {
    sign_in: 'login', 
@@ -8,7 +9,10 @@ Rails.application.routes.draw do
   controllers: { 
     registrations: 'registrations' 
   }
-  root 'product_groups#index'
+  devise_scope :user do
+    get '/confirmation-getting-started' => 'registrations#getting_started', as: 'confirmation_getting_started'
+  end
+  
   get 'contact', to: 'contact#index'
 
   resources :orders
