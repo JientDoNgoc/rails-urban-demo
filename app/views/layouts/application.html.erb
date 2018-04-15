@@ -10,8 +10,7 @@
 
   <body>
     <div id="MainWrapper">
-      <p class="notice"><%= notice %></p>
-      <p class="alert"><%= alert %></p>
+
       <!--Header-->
       <header>
         <div class="container">
@@ -68,6 +67,8 @@
               </ul>
             </div>
           </div>
+          <p class="notice" style="color: #fff;"><%= notice %></p>
+          <p class="alert" style="color: #fff;"><%= alert %></p>
         </nav>
       </div>
       <!--EndBanner-->
@@ -110,7 +111,6 @@
         </footer>
       </div>
       <!--EndFooter-->
-    </div>
       <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </body>
 </html>
