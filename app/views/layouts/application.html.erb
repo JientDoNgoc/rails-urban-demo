@@ -20,6 +20,9 @@
                 <div class="top-right">
                 	<ul>
                 	  <% if current_user %>
+                	    <%= link_to edit_user_registration_path do%>
+                        <%= current_user.firstname %>
+                      <% end %>
                       <%= link_to 'Logout', destroy_user_session_path, method: :delete %>
                     <% else %>
                       <%= link_to 'Register', new_user_registration_path %>
