@@ -1,5 +1,8 @@
 Rails.application.routes.draw do
+  mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
+  
   root 'product_groups#index'
+  
   devise_for :users , path: '', 
   path_names: {
    sign_in: 'login', 
@@ -15,10 +18,13 @@ Rails.application.routes.draw do
   
   get 'contact', to: 'contact#index'
 
-  resources :orders
-  resources :carts 
   resources :products
   resources :product_groups
+  
+  resources :cart_items
+  resources :orders do
+    get 'finished_order', to: 'orders#finished_order'
+  end
   resources :blogs
 
 end
