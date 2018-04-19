@@ -1,10 +1,26 @@
 ProductGroup.delete_all
 Product.delete_all
-#Comment.delete_all
 #Cart.delete_all
 #CartItem.delete_all
 #Order.delete_all
 #OrderItem.delete_all
+
+user = User.create(
+  email: 'jient.contact@gmail.com',
+  encrypted_password:'$2y$10$gp4m9WW0BQkIlc6Rrjost.MtcHolXLEeMLotAfDZZ0vTpnoEHrt7e',
+  firstname: 'Jient',
+  lastname: 'DoNgoc',
+  phone: '0906708166',
+  address:'Mỹ Giang 2B, Phú Mỹ Hưng, phường Tân Phong, Quận 7, TP HCM',
+  admin: true)
+user = User.create(
+  email: 'jientdongocsp@gmail.com',
+  encrypted_password:'$2y$10$WmEU1A5uDAI0s0TjZnmsNusW3n.I/PQ47C3UbWwA/dDln3F1oqnK2',
+  firstname: 'Thuy Oanh',
+  lastname: 'Do Ngoc',
+  phone: '0906708166',
+  address:'Mỹ Giang 2B, Phú Mỹ Hưng, phường Tân Phong, Quận 7, TP HCM',
+  admin: false)
 
 #Macfamily
 pgroup = ProductGroup.create(pg_name: 'Mac Family', pg_img: 'http://maccenter.vn/Images/imac_2x.png')

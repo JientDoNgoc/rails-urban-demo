@@ -1,24 +1,20 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+--The basic demo-- 
 
-Things you may want to cover:
+To run this project:
+Bash right side of the screen:
+$ cd final_demo_rails 
+$ sudo service postgresql start
+$ rails s -b $IP -p $PORT
 
-* Ruby version
+And then open this link in new tab:
+https://rails-final-demo-jientdongoc.c9users.io
 
-* System dependencies
+Register new user account or Login to user account 
+email: dongocthuyoanh.07.05@gmail.com
+pw: 12345678
 
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+Login to admin account
+email: jient.contact@gmail.com
+pw: 1234567890
