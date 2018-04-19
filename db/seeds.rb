@@ -336,7 +336,7 @@ pgroup.products << Product.create(p_model: 'iMac',
 #iPad
 pgroup = ProductGroup.create(pg_name: 'iPad', pg_img: 'http://maccenter.vn/Images/ipad_2x.png')
 
-pgroup.products << Product.create(p_model: 'iPad Pro 9.7 inch',  
+pgroup.products << Product.create(p_model: 'iPad Pro 9.7-inch',  
   p_name: 'iPad Pro 9.7 inch 32GB (RoseGold)', 
   price: 13800000, quantity: 20,
   p_img: 'http://maccenter.vn/App_Images/iPad-Pro-Small-RoseGold-A.jpg',

@@ -19,6 +19,7 @@ Rails.application.routes.draw do
   get 'contact', to: 'contact#index'
 
   resources :products
+  get "/fetch_products" => 'products#from_category', as: 'fetch_products'
   resources :product_groups
   
   resources :cart_items

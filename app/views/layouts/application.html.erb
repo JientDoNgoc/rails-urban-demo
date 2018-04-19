@@ -64,8 +64,11 @@
                     <i class="fa fa-shopping-cart fa-lg" style="color: #fff;"></i>
                   </a>
                   <div class="dropdown-menu dropdown-menu-right">
+                    <% @cart.cart_items.each do |item| %>
+                      <%= link_to "#{item.product.p_name} x #{item.quantity}", product_path(item.product.id), class: 'dropdown-item' %>
+                    <% end %>
                     <div class="dropdown-divider" href="#" ></div>
-                    <%= link_to product_groups_path, class:'dropdown-item' do %>
+                    <%= link_to new_order_path, class:'dropdown-item' do %>
                       <i class="fa fa-check" aria-hidden="true" ></i> CHECK OUT
                     <% end%>
                   </div>

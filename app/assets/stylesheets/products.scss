@@ -1,3 +1,19 @@
+.card-img-top {
+      display: block;
+      width: 90%;
+      height: auto;
+      padding-top: 2em;
+      padding-bottom: 0em;
+      padding-left: 4em;
+      padding-right: 4em;
+  }
+.nav-item {
+  h5:hover{
+    text-decoration: none;
+    text-decoration-line: underline;
+    text-decoration-color: #28ae89;
+  }
+}
 .products{
   border: 1px solid #999;
   padding: 0 0;
@@ -22,15 +38,6 @@
       box-shadow: none;
   }
 
-  .card-img-top {
-      display: block;
-      width: 90%;
-      height: auto;
-      padding-top: 2em;
-      padding-bottom: 0em;
-      padding-left: 4em;
-      padding-right: 4em;
-  }
   .details{
     height: 210px;
 
@@ -65,20 +72,92 @@
 .product{
   border: 1px solid #666;
   padding: 0 0;
-  .product-overview{
-    border: 1px solid #999;
-    padding-top: 0.5em;
-    width: 100%;
-    height: 550px;
+  
+  .product-top{
+    height: auto;
+    .product-overview{
+      padding-top: 0.5em;
+      width: 100%;
+      min-height: 550px;
+    }
+    .product-img-left{
+      float: left;
+      min-height: 500px;
+        padding-top: 1em;
+        padding-bottom: 1em;
+        padding-left: 1em;
+        margin-top: 0em;
+        margin-bottom: 1em;
+    }
+    img{
+      max-width: 100%;
+      max-height: 100%;
+    }
+    .product-img-list{
+      min-height: 500px;
+      display: inline-block;
+      position: relative;
+      float: left;
+      .product-img-box{
+        border: 1px solid #999;
+        height: 7em;
+        padding-top: 1em;
+        padding-bottom: 1em;
+        padding-left: 1em;
+        margin-top: 0em;
+        margin-bottom: 1em;
+      }
+      .card-img-center {
+        display: block;
+        width: 90%;
+        padding: 0 0;
+        position: relative;
+      }
+      }
+      .product-overview-right{
+        min-height: 500px;
+        float: right;
+        padding: 0 0;
+        .product-name{
+          padding-left: 0;
+          margin-left: 0;
+        }
+        .product-info{
+          .product-text{
+            color: #334d4d;
+          }
+          .btn-addcart{
+            background-color: #ffb380;
+          }
+        }
+      }
   }
-  .product-img-left{
-    border: 1px solid #999;
-    float: left;
-    height: 500px;
-    padding: 2em 2em;
-  }
-  .product-overview-right{
-    border: 1px solid #999;
-    float: right;
+  .product-bottom{
+    height: auto;
+    margin-bottom: 100px;
+    .product-tech{
+      margin: 2em 2em;
+    }
+    .product-box-left{
+      float: left;
+      margin-left: 1em;
+    }
+    .product-box{
+      margin-left: 2em;
+      .product-box-included{
+        height: 7em;
+        padding-top: 1em;
+        padding-bottom: 1em;
+        padding-left: 1em;
+        margin-top: 0em;
+        margin-bottom: 1em;
+      }
+      .card-img-box {
+        display: block;
+        width: 90%;
+        padding: 0 0;
+        position: relative;
+      }
+    }
   }
 }

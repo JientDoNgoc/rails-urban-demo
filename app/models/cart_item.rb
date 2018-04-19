@@ -1,8 +1,8 @@
 class CartItem < ApplicationRecord
-  belongs_to :food
+  belongs_to :product
   belongs_to :cart
 
   def total_price
-    price*quantity
+    price * quantity
   end
 end

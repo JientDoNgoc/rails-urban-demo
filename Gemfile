@@ -59,3 +59,4 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 gem 'devise', '~> 4.4', '>= 4.4.3'
 gem 'friendly_id', '~> 5.2', '>= 5.2.3'
 gem 'rails_admin', '~> 1.3'
+gem 'owlcarousel-rails'
