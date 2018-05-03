@@ -26,7 +26,6 @@ Rails.application.routes.draw do
   resources :orders do
     get 'finished_order', to: 'orders#finished_order'
   end
-  resources :blogs
 
 end
 
