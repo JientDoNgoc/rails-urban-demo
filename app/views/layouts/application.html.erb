@@ -40,7 +40,7 @@
       </header
       <!--endHeader-->
       <!--Banner-->
-      <div class="container">
+      <div class="container" style="margin-bottom: 0; padding-bottom: 0;">
         <nav class="navbar sticky-top navbar-expand-lg navbar-dark ">
           <div class="container">
             <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -77,14 +77,14 @@
             </div>
           </div>
         </nav>
+        <div style="background-color: #000;">
+          <p class=" notice" style="color: #ffffff;"><%= notice %></p>
+          <p class=" alert" style="color: #ffffff;"><%= alert %></p>
+        </div>
       </div>
       <!--EndBanner-->
       <!--Content-->
-      <div id="content" class="container">
-        <div>
-          <p class="notice" style="color: #000;"><%= notice %></p>
-          <p class="alert" style="color: #000;"><%= alert %></p>
-        </div>
+      <div id="content" class="container" >
         <%= yield %>
       </div>
       <!--EndContent-->
